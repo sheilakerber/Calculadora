@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CALCULADORA</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <div>
+        <p> Obs: primeiro insira os valores do cálculo, depois escolha a operação.
+        </p>
+        <br>
+
+        <input type="number" name="n1" id="n1">
+        <input type="button" class="operador" value="+" onclick="somar()">
+        <input type="button" class="operador" value="-" onclick="subtrair()">
+        <input type="button" class="operador" value="*" onclick="multiplicar()">
+        <input type="button" class="operador" value="/" onclick="dividir()">
+
+        <input type="number" name="n2" id="n2">
+
+        <p>Resultado <input type="number" name="resultado" id="resultado" readonly></p>
+    </div>
+
+    <script>
+        //<input type="button" value="Calcular" onclick="">
+
+        function somar() {
+            document.getElementById("resultado").value = Number(document.getElementById("n1").value) + Number(document.getElementById("n2").value)
+            document.getElementById("n1").value = ""
+            document.getElementById("n2").value = ""
+        }
+
+        function subtrair() {
+            document.getElementById("resultado").value = Number(document.getElementById("n1").value) - Number(document.getElementById("n2").value)
+            document.getElementById("n1").value = ""
+            document.getElementById("n2").value = ""
+        }
+
+        function multiplicar() {
+            document.getElementById("resultado").value = Number(document.getElementById("n1").value) * Number(document.getElementById("n2").value)
+            document.getElementById("n1").value = ""
+            document.getElementById("n2").value = ""
+        }
+
+        function dividir() {
+            document.getElementById("resultado").value = Number(document.getElementById("n1").value) / Number(document.getElementById("n2").value)
+            document.getElementById("n1").value = ""
+            document.getElementById("n2").value = ""
+        }
+    </script>
+
+</body>
+
+</html>
